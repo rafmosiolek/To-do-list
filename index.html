@@ -1,26 +1,33 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple to-do list app written in JavaScript">
     <title>Your everyday to-do list.</title>
-    <!-- core css file -->
+
+    <!-- core CSS file -->
     <link rel="stylesheet" type="text/css" href="app/style.css">
-    <!-- font awesome -->
+    <!-- plugins -->
     <link rel="stylesheet" href="vendor/font-awesome.min.css">
 </head>
 <body>
+    <div id="tasker-wrapper">
 
-<div id="tasker-wrapper">
-    <div class="tasker">
-        <input type="text" id="input-task" placeholder="Enter a task!">
-        <button class="add-task"><i class="fa fa-plus fa-4x"></i></button>
+        <div class="tasker">
+            <input type="text" id="input-task" placeholder="Enter a task!">
+            <button class="add-task"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </div>
+
+        <div class="tasker-body">
+            <ul class="tasks">
+            </ul>
+        </div>
+
     </div>
-</div>
 
-
-
-
-<!-- core js file -->
-<script type="text/javascript" src="app/script.js"></script>
+    <!-- core JS file -->
+    <script type="text/javascript" src="app/script.js"></script>
 </body>
 </html>
+

@@ -15,7 +15,7 @@ html, body {
 }
 
 #tasker-wrapper {
-    width: 70%;
+    width: 85%;
     max-width: 400px;
     margin: 20px auto;
 }
@@ -41,6 +41,10 @@ html, body {
     flex-grow: 2;
 }
 
+.tasker input:focus {
+    outline-width: 0;   /*removes higlight effect from an input element*/
+}
+
 .add-task {
     background-color: #1abc9c; 
     color: #fff;
@@ -50,11 +54,33 @@ html, body {
     border: 1px solid #16a085;
     cursor: pointer;
 
-    width: 60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+
+    line-height: 1em;
 }
 
 .add-task:hover {
     background-color: #28e1bd;
     border: none;
+}
+
+
+
+
+
+.tasker-body {
+    margin: 0 auto;
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+
+    position: relative;
+    padding: 14px 40px 14px 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+}
+
+.tasker-body:last-child {
+    border-bottom: none;
 }

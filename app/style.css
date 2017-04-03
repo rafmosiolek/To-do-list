@@ -49,7 +49,7 @@ html, body {
     background-color: #1abc9c; 
     color: #fff;
     padding: 14px;
-    font-size: 1.25em;
+    font-size: 1em;
     font-weight: bold;
     border: 1px solid #16a085;
     cursor: pointer;
@@ -65,22 +65,74 @@ html, body {
     border: none;
 }
 
-
+.add-task:active, .add-task:focus {
+    outline-width: 0; 
+}
 
 
 
 .tasker-body {
     margin: 0 auto;
     width: 100%;
+    height: 50px;
     display: inline-flex;
     justify-content: space-between;
 
-    position: relative;
-    padding: 14px 40px 14px 14px;
+/*    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;*/
+
+    background-color: #cbd1d6;
+    color: #fff;
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: 200;
+    font-size: 0.85em;
+
+
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 
 }
 
 .tasker-body:last-child {
     border-bottom: none;
+}
+
+.delete, .done {
+/*    opacity: 0;*/
+    color: #fff;
+
+    font-size: 1.25em;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    width: 50px;
+    height: 50px;
+
+    line-height: 1em;
+}
+
+.delete {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.done {
+    background-color: #2ecc71;
+    border: 1px solid #2ecc71;
+}
+
+.delete:hover {
+    background-color: #ed7669;
+    border: none;
+}
+
+.done:hover {
+    background-color: #70df9f;
+    border: none;
+}
+
+.delete:focus, .delete:active, .done:focus, .done:active {
+    outline-width: 0; 
 }

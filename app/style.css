@@ -6,6 +6,8 @@ html, body {
     border: none;
     outline: none;
 
+    font-family: Helvetica, Arial, sans-serif;
+
 }
 
 * {
@@ -19,6 +21,18 @@ html, body {
     max-width: 400px;
     margin: 20px auto;
 }
+
+
+#error {
+    display: none;
+    background: #e74c3c;
+    color: #fff;
+    padding: 1px;
+    margin-bottom: 14px;
+    border-radius: 5px;
+    text-align: center;
+}
+
 
 .tasker {
     margin: 0 auto;
@@ -87,7 +101,7 @@ html, body {
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 200;
-    font-size: 0.85em;
+    font-size: 0.75em;
 
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -98,8 +112,13 @@ html, body {
     border-bottom: none;
 }
 
+.tasker-body ul {
+    padding: 0px;
+    margin: auto;
+}
+
 .delete, .done {
-/*    opacity: 0;*/
+    /*    opacity: 0;*/
     color: #fff;
 
     font-size: 1.25em;

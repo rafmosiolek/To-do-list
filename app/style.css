@@ -107,6 +107,19 @@ html, body {
     padding-top: 3px;
     padding-bottom: 3px;*/
 
+
+
+}
+
+
+.tasker-body ul:last-child {
+    border-bottom: none;
+}
+
+.tasker-body ul {
+    padding: 0px;
+    margin: auto;
+
     background-color: #cbd1d6;
     color: #fff;
     font-family: Helvetica, Arial, sans-serif;
@@ -115,17 +128,6 @@ html, body {
 
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-
-}
-
-
-.tasker-body:last-child {
-    border-bottom: none;
-}
-
-.tasker-body ul {
-    padding: 0px;
-    margin: auto;
 }
 
 /*class for completed tasks*/

@@ -33,16 +33,17 @@ function renderTask() {
     var checkedIcon = document.createElement("i");
     checkedIcon.setAttribute("class", "fa fa-check");
     checkedIcon.setAttribute("aria-hidden", "true");
-    doneBtn.appendChild(checkedIcon); // places an checked icon inside a button
+    doneBtn.appendChild(checkedIcon); // places a checked icon inside a button
 
     // user task
-    var taskVal = document.createTextNode(this.taskInput.value);
+    var taskVal = document.createTextNode(this.inputTask.value);
 
+    var taskList = document.querySelectorAll("ul");
     taskLi.appendChild(deleteBtn);
     taskLi.appendChild(taskVal);
     taskLi.appendChild(doneBtn);
 
-    this.tasklist.appendChild(taskLi);
+    taskList.appendChild(taskLi);
 }
 
 addBtn.addEventListener("click", renderTask());

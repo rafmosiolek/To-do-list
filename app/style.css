@@ -62,7 +62,7 @@ html, body {
 }
 
 /*add-task button*/
-.add-task {
+#add-task {
     background-color: #1abc9c; 
     color: #fff;
     padding: 14px;
@@ -77,12 +77,12 @@ html, body {
     line-height: 1em;
 }
 
-.add-task:hover {
+#add-task:hover {
     background-color: #28e1bd;
     border: none;
 }
 
-.add-task:active, .add-task:focus {
+#add-task:active, #add-task:focus {
     outline-width: 0; 
 }
 
@@ -93,8 +93,7 @@ html, body {
 
 /*elements added underneath header*/
 .tasker-body {
-
-/*    visibility: hidden;*/ /* elemnets are not visible until JS triggers an event*/
+    visibility: hidden; /* elemnets are not visible until JS triggers an event*/
 
     margin: 0 auto;
     width: 100%;
@@ -102,13 +101,8 @@ html, body {
     display: inline-flex;
     justify-content: space-between;
 
-/*    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 3px;
-    padding-bottom: 3px;*/
-
-
-
+    background-color: #cbd1d6;
+    color: #fff;
 }
 
 
@@ -117,14 +111,16 @@ html, body {
 }
 
 .tasker-body ul {
-    padding: 0px;
     margin: auto;
 
-    background-color: #cbd1d6;
-    color: #fff;
     font-family: Helvetica, Arial, sans-serif;
     font-weight: 200;
     font-size: 0.75em;
+
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 3px;
+    padding-bottom: 3px;
 
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);

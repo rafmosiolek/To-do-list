@@ -1,16 +1,22 @@
 // Global scope variables
 
-var errorBox = document.getElementById('error'); // error box displayed when user didn't enter a task
-var tasker = document.getElementsByClassName('tasker'); // tasker header
-var inputTask = document.getElementById('input-task'); // main input in a tasker header
-var addBtn = document.getElementsByClassName('add-task'); // main add task button;
 
 // var taskerBody = document.getElementsByClassName('tasker-body'); // takser body div
 // var deleteBtn = document.getElementsByClassName('delete'); // delete task button
 // var doneBtn = document.getElementsByClassName('done'); // mark task as done button
 
-var tasks = document.getElementsByClassName('tasks'); // new tasks
+var taskInput = document.getElementById("input-task"); // main input in a tasker header
+var addBtn = document.getElementById("add-task"); // add task button
+var tasklist = document.getElementsByClassName("tasks") // tasks unordered list
+var taskListChildren = tasklist.children; // li elements
+var errorBox = document.getElementById("error") // error box displayed when user didn't enter a task
 
+
+        // },
+        // bindEvents: function() {
+        //     this.addBtn.onclick = this.addTask.bind(this);
+        //     this.taskInput.onkeypress = this.enterKey.bind(this);
+        // },
 
 function renderTask() {
     // build html
@@ -36,14 +42,31 @@ function renderTask() {
     doneBtn.appendChild(checkedIcon); // places a checked icon inside a button
 
     // user task
-    var taskVal = document.createTextNode(this.inputTask.value);
+    var taskVal = document.createTextNode(taskInput.value);
 
-    var taskList = document.querySelectorAll("ul");
     taskLi.appendChild(deleteBtn);
     taskLi.appendChild(taskVal);
     taskLi.appendChild(doneBtn);
 
-    taskList.appendChild(taskLi);
+    // tasklist.appendChild(taskLi);
 }
 
-addBtn.addEventListener("click", renderTask());
+function error () {
+   if (taskInput.value === ""){
+    errorBox.style.display = "block";
+    }   
+}
+
+
+
+
+function addTask() {
+    var value = taskInput.value;
+
+    return renderTask();
+    taskInput.value = "";
+
+    }
+
+
+addBtn.addEventListener("click", addTask());

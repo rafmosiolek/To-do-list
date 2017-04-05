@@ -93,7 +93,7 @@ html, body {
 
 /*elements added underneath header*/
 .tasker-body {
-    visibility: hidden; /* elemnets are not visible until JS triggers an event*/
+/*    visibility: hidden; *//* elemnets are not visible until JS triggers an event*/
 
     margin: 0 auto;
     width: 100%;

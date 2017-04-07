@@ -34,14 +34,21 @@ function addTask(){
 }
 
 // removes the item
-function removeItem(){
-    var parent = this.parentNode.parentNode;
-    var child = this.parentNode
+// function removeItem(){
+//     var parent = this.parentNode.parentNode;
+//     var child = this.parentNode
 
-    parent.removeChild(child);
-}
+//     parent.removeChild(child);
+// }
 
+// function errorBox {
+//     var textBox = document.getElementById('input-task');
+//     var errorMsg = document.getElementById('error');
 
+//     if (textBox.value === "") {
+//         errorMsg.style.display = "block";
+//     }
+// }
 
 // // Global scope variables
 

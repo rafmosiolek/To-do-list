@@ -1,6 +1,8 @@
 // global scope variables
 var addButton = document.getElementById('add-task');
 
+var textBox = document.getElementById('input-task');
+
 // event listeners
 addButton.addEventListener("click", addTask);
 
@@ -16,7 +18,6 @@ addButton.addEventListener("click", addTask);
 
 
 function addTask(){
-    var textBox = document.getElementById('input-task');
     var list = document.getElementById('tasks');
     var listElement = document.createElement('li');
     // var deleteLink = document.createElement('a');
@@ -37,11 +38,10 @@ function enterKey(event){
 }
 
 function errorMsg() {
-    var textBox = document.getElementById('input-task');
     var errorBox = document.getElementById('error');
-
-    if(textBox.value = ""){
-        errorBox.style.display("block");
+   
+    if(textBox.value === ""){
+        errorBox.style.display = "block";
     }
 
 }

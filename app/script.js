@@ -4,6 +4,7 @@ var addButton = document.getElementById('add-task');
 // event listeners
 addButton.addEventListener("click", addTask);
 
+
 // assign event listener to all delete links
 // function assignDeleteLinkEvent(){
 //     var deleteLinks = document.getElementsByClassName('delete-link');
@@ -15,7 +16,6 @@ addButton.addEventListener("click", addTask);
 
 
 function addTask(){
-    
     var textBox = document.getElementById('input-task');
     var list = document.getElementById('tasks');
     var listElement = document.createElement('li');
@@ -23,15 +23,32 @@ function addTask(){
     // append item to list
     list.appendChild(listElement);
     listElement.innerText = textBox.value;
-    // append delete link to item
-    deleteLink.setAttribute("href", "#");
-    deleteLink.setAttribute("class", "delete-link");
-    deleteLink.innerHTML = "x";
-    listElement.appendChild(deleteLink);
-    assignDeleteLinkEvent();
+  
     // reset input box
     textBox.value = "";
+
+
+};
+
+function enterKey(event){
+    if (event.keyCode === 13 || event.which === 13) {
+        return addTask();
+    }
 }
+
+function errorMsg() {
+    var textBox = document.getElementById('input-task');
+    var errorBox = document.getElementById('error');
+
+    if(textBox.value = ""){
+        errorBox.style.display("block");
+    }
+
+}
+
+
+
+
 
 // removes the item
 // function removeItem(){

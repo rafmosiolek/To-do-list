@@ -1,3 +1,103 @@
-html {
-    background-color: red;
+html, body {
+    height: 100%;
+    background-color: #ecf0f1;
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+
+    font-family: Helvetica, Arial, sans-serif;
+
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+header {
+    width:100%;
+    height:80px;
+    position:fixed;
+    padding:15px;
+    top:0;
+    left:0;
+    z-index:5;
+    background: rgba(7, 39, 53, 0.75);
+    box-shadow:0px 2px 4px rgba(44,62,80,0.15);
+    border-bottom-right-radius:10px;
+    border-bottom-left-radius:10px;
+}
+
+header input {
+    width:100%;
+    height:50px;
+    float:left;
+    color:#fff;
+    font-size:15px;
+    font-weight:400;
+    text-indent:18px;
+    padding:0 60px 0 0;
+    background: #bdc3c7;
+    border-top-left-radius:5px;
+    border-bottom-left-radius:5px;
+    border-top-right-radius:25px;
+    border-bottom-right-radius:25px;
+    border:0px;
+    box-shadow:none;
+    outline:none;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+header input::-webkit-input-placeholder {
+    color:rgba(255,255,255,0.75);
+}
+
+header input:-moz-input-placeholder {
+    color:rgba(255,255,255,0.75);
+}
+
+header input::-moz-input-placeholder {
+    color:rgba(255,255,255,0.75);
+}
+
+header input:-ms-input-placeholder {
+    color:rgba(255,255,255,0.75);
+}
+
+header button {
+    width:50px;
+    height:50px;
+    position:absolute;
+    top:15px;
+    right:15px;
+    z-index:2;
+    border-radius:25px;
+    border: 1px solid #16a085;
+    background: #1abc9c;
+    border:0px;
+    box-shadow:none;
+    outline:none;
+    cursor:pointer;
+
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+}
+
+header button:hover {
+    background-color: #28e1bd;
+    border: none;
+}
+
+header button i {
+    font-weight: 200;
 }

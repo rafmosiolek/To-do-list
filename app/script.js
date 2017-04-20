@@ -13,19 +13,47 @@ addButton.addEventListener("click", function() {
      }
 });
 
+// adds a new item to the to do list
+function addTask(text) {
+    var list = document.getElementById("to-do");
+
+    // create the li element with new task
+    var item = document.createElement("li");
+    item.innerText = text;
+
+    // create div.buttons
+    var buttons = document.createElement("div");
+    buttons.classList.add("buttons");
+
+    // create remove button
+    var remove = document.createElement("button");
+    remove.classList.add("remove");
+    remove.innerHTML = "<i class='fa fa-trash-o fa-lg' aria-hidden='true'></i>";
+    // add eventlistener for removing the task
+    remove.addEventListener("click", removeItem);
+
+    // create complete button
+    var complete = document.createElement("button");
+    complete.classList.add("complete");
+    complete.innerHTML = "<i class='fa fa-check-circle-o fa-lg' aria-hidden='true'></i>";
+    // add eventlistener for completing the task
+    complete.addEventListener("click", completeItem);
+
+    buttons.appendChild(remove);
+    buttons.appendChild(complete);
+    item.appendChild(buttons);
+
+    list.insertBefore(item, list.childNodes[0]);
+}
+
+function removeItem() {}
+function completeItem() {}
 
 
 
 
 
-
-
-
-
-
-
-
-
+ 
 
 
 

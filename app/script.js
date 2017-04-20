@@ -2,6 +2,16 @@
 
 
 
+// variable stores the add button reference:
+var addButton = document.getElementById("add");
+// event listener for the add buton
+addButton.addEventListener("click", function() {
+     var value = document.getElementById("item").value;
+     // if there is any text inside the item field, add that text to the to-do list
+     if (value) {
+        // add text to the to-do list
+     }
+});
 
 
 

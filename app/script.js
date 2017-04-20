@@ -30,14 +30,14 @@ function addTask(text) {
     remove.classList.add("remove");
     remove.innerHTML = "<i class='fa fa-trash-o fa-lg' aria-hidden='true'></i>";
     // add eventlistener for removing the task
-    remove.addEventListener("click", removeItem);
+    remove.addEventListener("click", removeTask);
 
     // create complete button
     var complete = document.createElement("button");
     complete.classList.add("complete");
     complete.innerHTML = "<i class='fa fa-check-circle-o fa-lg' aria-hidden='true'></i>";
     // add eventlistener for completing the task
-    complete.addEventListener("click", completeItem);
+    complete.addEventListener("click", completeTask);
 
     buttons.appendChild(remove);
     buttons.appendChild(complete);
@@ -46,10 +46,25 @@ function addTask(text) {
     list.insertBefore(item, list.childNodes[0]);
 }
 
-function removeItem() {}
-function completeItem() {}
 
+function removeTask() {
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+ 
+    parent.removeChild(item);
+}
 
+function completeTask() {
+    var item = this.parentNode.parentNode;
+    var parent = item.parentNode;
+    var id = parent.id;
+ 
+    // Check if the item should be added to the completed list or to re-added to the todo list
+    var target = (id === 'todo') ? document.getElementById('completed'):document.getElementById('todo');
+ 
+    parent.removeChild(item);
+    target.insertBefore(item, target.childNodes[0]);
+}
 
 
 
